@@ -1,0 +1,2 @@
+class Kima < ApplicationRecord
+end
