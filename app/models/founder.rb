@@ -1,4 +1,4 @@
 class Founder < ApplicationRecord
-  has_one :startup
+  belongs_to :startup
   validates :name, presence: true
 end
