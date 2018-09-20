@@ -2,12 +2,10 @@
 
 one:
   title: MyString
-  date: 2018-09-11
-  source_url: MyString
-  kima: one
+  date: 2018-09-19
+  url: MyString
 
 two:
   title: MyString
-  date: 2018-09-11
-  source_url: MyString
-  kima: two
+  date: 2018-09-19
+  url: MyString
