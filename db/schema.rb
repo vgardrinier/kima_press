@@ -10,34 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180912012225) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.date "date"
-    t.string "source_url"
-    t.bigint "kima_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["kima_id"], name: "index_articles_on_kima_id"
-  end
-
-  create_table "founders", force: :cascade do |t|
-    t.string "name"
-    t.string "background"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "kimas", force: :cascade do |t|
-    t.string "name"
-    t.string "username"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_foreign_key "articles", "kimas"
 end
