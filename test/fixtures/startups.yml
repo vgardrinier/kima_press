@@ -2,18 +2,12 @@
 
 one:
   name: MyString
-  description: MyString
-  pb_and_sol: MyString
-  secret_sauce: MyString
-  burn_rate: 1
-  founder: one
-  kima: one
+  string: MyString
+  burn_rate: MyString
+  integer: MyString
 
 two:
   name: MyString
-  description: MyString
-  pb_and_sol: MyString
-  secret_sauce: MyString
-  burn_rate: 1
-  founder: two
-  kima: two
+  string: MyString
+  burn_rate: MyString
+  integer: MyString
