@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Team members</title>
+  </head>
+  <body>
+    <h1> Kima members </h1>
+    <ol>
+      <% @companies.each do |employee| %>
+        <li><%= employee.username %></li>
+      <% end %>
+    </ol>
+  </body>
+</html>
