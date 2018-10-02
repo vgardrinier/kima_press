@@ -6,9 +6,10 @@
   </head>
   <body>
     <h1> Kima members </h1>
+    <%= link_to "Submit new company", new_company_path %>
     <ol>
-      <% @companies.each do |employee| %>
-        <li><%= employee.name %></li>
+      <% @companies.each do |company| %>
+        <li><%= company.name %></li>
       <% end %>
     </ol>
   </body>
