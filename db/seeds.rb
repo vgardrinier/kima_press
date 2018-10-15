@@ -10,7 +10,7 @@ last_member = Member.count
 rand_company = (1...last_company)
 rand_member = (1...last_member)
 
-20 times do
+20.times do
   Member.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -19,7 +19,7 @@ rand_member = (1...last_member)
     )
 end
 
-20 times do
+20.times do
   Article.create(
     title: Faker::Book.title,
     date: Faker::Date.between(600.days.ago, Date.today),
