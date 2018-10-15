@@ -12,8 +12,11 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    if @company.save?
-      @company = Company.create
+    @company = Company.new(company_params)
+    if @company.save
+      redirect_to companies_path
+    else
+      render 'new'
     end
   end
 
@@ -30,4 +33,11 @@ class CompaniesController < ApplicationController
     @company = Company.find(params[:id])
     @company.destroy
   end
+
+ private
+
+  def company_params
+    params.require(:company).permit(:name)
+  end
+
 end

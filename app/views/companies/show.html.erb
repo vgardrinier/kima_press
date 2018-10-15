@@ -1,0 +1,9 @@
+<div>
+  <ol>
+  <% Member.all.each do |member| %>
+    <% if member.company_id == @company.id %>
+        <li><%= member.username %></li>
+    <% end %>
+  <% end %>
+  </ol>
+</div>
