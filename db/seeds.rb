@@ -5,12 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-last_company = Company.count
-last_member = Member.count
-rand_company = (1...last_company)
-rand_member = (1...last_member)
 
+
+puts "seeding members"
 20.times do
+  last_company = Company.count
+  rand_company = (1..last_company).to_a.sample
+
   Member.create(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
@@ -19,10 +20,16 @@ rand_member = (1...last_member)
     )
 end
 
+puts "seeding articles"
 20.times do
+  last_member = Member.count
+  rand_member = (1..last_member).to_a.sample
+
   Article.create(
     title: Faker::Book.title,
     date: Faker::Date.between(600.days.ago, Date.today),
     member_id: rand_member
     )
 end
+
+puts "DONE"
