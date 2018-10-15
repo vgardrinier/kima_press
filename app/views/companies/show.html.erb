@@ -2,7 +2,7 @@
   <ol>
   <% Member.all.each do |member| %>
     <% if member.company_id == @company.id %>
-        <li><%= member.username %></li>
+        <li><b><%= member.first_name %> <%= member.last_name %></b><%= member.username %></li>
     <% end %>
   <% end %>
   </ol>
