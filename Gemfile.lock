@@ -69,6 +69,8 @@ GEM
     crass (1.0.4)
     erubi (1.7.1)
     execjs (2.7.0)
+    faker (1.8.7)
+      i18n (>= 0.7)
     ffi (1.9.25)
     font-awesome-sass (5.0.6.2)
       sass (>= 3.2)
@@ -195,6 +197,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  faker
   font-awesome-sass (~> 5.0.6)
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
