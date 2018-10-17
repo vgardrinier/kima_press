@@ -4,7 +4,7 @@
     <% if member.company_id == @company.id %>
         <li>
           <b><%= member.first_name %> <%= member.last_name %></b>
-          <p><i>(Username: <%= member.username %>)</i></p>
+          <p><i>(Username: <%= link_to member.username, company_member_path(@company,member) %>)</i></p>
         </li>
     <% end %>
   <% end %>
