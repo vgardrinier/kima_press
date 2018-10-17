@@ -1,0 +1,10 @@
+<div>
+  <h2><%= @member.username %></h2>
+  <ol>
+    <% Article.all.each do |article| %>
+      <% if article.member_id == @member.id %>
+        <li><%= article.title %> <p><%= link_to "Check it out" article.url %></p></li>
+      <% end %>
+    <% end %>
+  </ol>
+</div>
