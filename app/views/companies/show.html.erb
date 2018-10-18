@@ -2,7 +2,10 @@
   <ol>
   <% Member.all.each do |member| %>
     <% if member.company_id == @company.id %>
-        <li><%= member.username %></li>
+        <li>
+          <b><%= member.first_name %> <%= member.last_name %></b>
+          <p><i>(Username: <%= link_to member.username, company_member_path(@company,member) %>)</i></p>
+        </li>
     <% end %>
   <% end %>
   </ol>
